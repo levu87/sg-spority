@@ -1,0 +1,148 @@
+
+.popup-wrapper
+    opacity: 0
+    pointer-events: none
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    background: rgba(#000,.7)
+    z-index: 999
+    display: flex
+    transition: .4s ease-in-out all
+    justify-content: center
+    align-items: center
+    &.active
+        opacity: 1
+        pointer-events: initial
+    .popup-main
+        background: #fff
+        position: relative
+        height: 500px
+        padding: 10px
+        &::-webkit-scrollbar
+            width: 4px
+            transition: all 0.5s ease-in-out
+        &::-webkit-scrollbar-track
+            background: #ffffff
+            // border-radius: 4px
+        &::-webkit-scrollbar-thumb
+            background: #333333
+        iframe
+            border: 0
+            height: 100%
+            width: 100%
+
+    .close-button
+        position: absolute
+        bottom: 100%
+        right: 0
+        width: 50px
+        height: 50px
+        background: #333333
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 34px
+        em
+            line-height: 1
+            &:before
+                content: '\e870'
+@media(min-width: 1025px)
+    .popup-wrapper
+        .popup-main
+            padding: 30px
+            width: calc(100% - 50px)
+            height: 500px
+            .close-button
+                right: 0
+                top: 0
+                bottom: auto
+// @media screen and ( min-width: 850px ) and ( max-height: 768px )
+@media(min-width: 1600px) and (min-height: 900px)
+    .popup-wrapper
+        .popup-main
+            height: 911px
+.clearfix:after
+    clear: both
+    content: ""
+    display: block
+.hidden-mobile
+    @media (max-width: 1024px)
+        display: none
+.hidden-desktop
+    @media (min-width: 1025px)
+        display: block
+.m-0
+    margin: 0
+.p-0
+    padding: 0
+#overlay
+    position: fixed
+    z-index: 99999
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: #ffffff
+    transition: 1s 0.4s
+
+#progress
+    height: 1px
+    background: #000
+    position: absolute
+    width: 0
+    top: 50%
+    transform: translateY(-50%)
+    transition: 1s
+    display: none
+
+.progstat-wrapper
+    color: #000
+    font-size: 0.7em
+    letter-spacing: 3px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    margin-top: 0
+    width: 100%
+    text-align: center
+.main-title
+    font-size: 2.8rem
+    color: #000000
+    text-align: left
+    display: flex
+    align-items: center
+    text-transform: capitalize
+    margin-bottom: 5rem
+    span
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background: #A92FA3
+        display: block
+        margin-left: 2rem
+        position: relative
+        &:after,&:before
+            content: ' '
+            display: block
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            position: absolute
+            top: 0
+        &:before
+            background: #F8CA38
+            left: 3rem
+        &:after
+            background: #00A2D3
+            left: 6rem
+        &.animated
+            &:after
+                animation-name: showDots
+                animation-duration: .9s
+            &:before
+                animation-name: showDots
+                animation-duration: .7s

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&amp;amp;subset=vietnamese" rel="stylesheet">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title>Home</title>
+		<script>
+			; (function () {
+				function id(v) { return document.getElementById(v); }
+				function loadbar() {
+					var ovrl = id("overlay"),
+						prog = id("progress"),
+						stat = id("progstat"),
+						img = document.images,
+						c = 0,
+						tot = img.length;
+					if (tot == 0) return doneLoading();
+			
+					function imgLoaded() {
+						c += 1;
+						var perc = ((100 / tot * c) << 0);
+						prog.style.width = perc;
+						stat.innerHTML = perc;
+						if (c === tot) return doneLoading();
+					}
+					function doneLoading() {
+						ovrl.style.opacity = 0;
+						setTimeout(function () {
+							ovrl.style.display = "none";
+						}, 1200);
+					}
+					for (var i = 0; i < tot; i++) {
+						var tImg = new Image();
+						tImg.onload = imgLoaded;
+						tImg.onerror = imgLoaded;
+						tImg.src = img[i].src;
+					}
+				}
+				document.addEventListener('DOMContentLoaded', loadbar, false);
+			}());
+		</script>
+	</head>
+	<body class="home-page"><div id="overlay">
+		<div class="logo-loader"></div><div class="progstat-wrapper">Loading: <span id="progstat"></span>%</div>
+<div id="progress"></div>
+</div>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header-wrapper"><a class="logo" href="#"><img src="./img/home/logo-sg-spority-white.png" alt=""></a>
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__item has-dropdown"><a class="menu__link" href="#">sg spority</a><em class="mdi mdi-menu-down dropdown-icon"></em>
+									<ul class="nav-sub">
+										<li><a href="#">about sg spority</a></li>
+										<li><a href="#">how to parcitipate</a></li>
+										<li><a href="#">giving back</a></li>
+									</ul>
+								</li>
+								<li class="menu__item"><a class="menu__link" href="#">faq</a></li>
+								<li class="menu__item"><a class="menu__link" href="#">rules & regulation</a></li>
+								<li class="menu__item"><a class="menu__link" href="#">contact us</a></li>
+							</ul>
+						</nav>
+						<div class="buttons"><a class="btn btn--register" href="#">register</a><span>/</span><a class="btn btn--login" href="#">login</a></div>
+						<div class="toggle-btn">
+							<div class="btn"></div>
+						</div>
+						<div class="mobile-inner-nav"></div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<section class="sgspority-banner">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="box-img"><img src="./img/home/banner.jpg" alt="banner"></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="box-img"><img src="./img/home/banner.jpg" alt="banner"></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="box-img"><img src="./img/home/banner.jpg" alt="banner"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="about-sgspority animatable">
+					<div class="container">
+						<h2 class="main-title">about sg spority<span class="animatable showDots"></span></h2>
+						<div class="content">
+							<div class="content__left">
+								<p>A Virtual Challenge For Anyone.</p>
+								<p>SG Spority is all about making sports beautiful by combining the pleasure of sports with the joy of giving. As a virtual event, you can cycle, run or skate anywhere at your own pace to reach the target distance of 5.5km. It doesn’t matter how long you take, as long as you get moving!</p>
+							</div>
+							<div class="content__right">
+								<p>SG Spority 2020 is proud to be supporting Club Rainbow Singapore a kids focused charity organisation. For every registration, SG Spority pledges to channel $5 to a fund that will support the beneficiaries of Club Rainbow Singapore. In the spirit of National Day in these trying times, let’s come together as a nation to reach the overall target of helping 550 beneficiaries with their daily necessities.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="participate">
+					<div class="container">
+						<h2 class="main-title">how to participate<span class="animatable showDots"></span></h2>
+					</div>
+					<div class="list-item">
+						<div class="item animatable zoomReverseIn">
+							<div class="box-img"><img src="./img/home/participate-1.png" alt=""></div>
+							<div class="title">cycle</div>
+						</div>
+						<div class="item animatable zoomReverseIn">
+							<div class="box-img"><img src="./img/home/participate-2.png" alt=""></div>
+							<div class="title">run</div>
+						</div>
+						<div class="item animatable zoomIn">
+							<div class="box-img"><img src="./img/home/participate-3.png" alt=""></div>
+							<div class="title">skate</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="content">
+							<div class="content__list animatable">
+								<div class="content__item">
+									<div class="position"><span class="number">1</span></div>
+									<div class="text">
+										<p>Sign up for a fee of $7.50 and complete your<strong>5.5km of Cycle, Run or Skate</strong></p>(or a combination of any!) between 20 th July to 9th August.
+									</div>
+								</div>
+								<div class="content__item">
+									<div class="position"><span class="number">2</span></div>
+									<div class="text">
+										<p>Record your activity using any suitable fitness apps that can<strong>display the date, time and distance</strong></p>of the activity and take a photo of the completion details.
+										<p>Can’t finish it in one go?<strong>You can accumulate the distance in up to 3 sessions!</strong></p>
+									</div>
+								</div>
+								<div class="content__item">
+									<div class="position"><span class="number">3</span></div>
+									<div class="text">
+										<p>Upload a photo of yourself and the proof of activity to be eligible for an<strong>e-certificate customised with your own photo!</strong></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="giving-back">
+					<div class="container">
+						<h2 class="main-title">Giving back<span class="animatable showDots"></span></h2>
+					</div>
+					<div class="full-content">
+						<div class="container">
+							<div class="box-content">
+								<div class="content">
+									<p>For every registration, SG Spority pledges to channel $5 to a fund that will help up to 550 beneficiaries of Club Rainbow Singapore with their daily necessities when we reach the event goal.</p><strong>For every 100 participants, one heart will light up.</strong>
+									<p>Spread the word and help us light up all 55 hearts!</p>
+								</div>
+								<div class="box-img"><img src="./img/home/giving-back.png" alt=""></div>
+							</div>
+						</div>
+						<div class="banner"><img src="./img/1920x450.png" alt=""></div>
+						<div class="container">
+							<div class="box-content">
+								<div class="content">
+									<p>Club Rainbow Singapore is a non profit organisation that provides a range of compassionate relevant services for the families of children who suffer from major chronic and potentially life threatening illnesses.</p>
+									<p>Your participation contributes to a fund that will go towards supporting beneficiaries of Club Rainbow Singapore, with daily necessities that can last them up to a month. When we reach the event target, up to 550 beneficiaries will benefit from your actions. Show your support by going the distance with SG Spority!</p>
+								</div>
+								<div class="box-img"><img src="./img/home/club-rainbow.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="wall-of-encouragement">
+					<div class="container">
+						<h2 class="main-title">wall of encouragement<span class="animatable showDots"></span></h2>
+					</div>
+					<div class="list-item">
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+						<div class="item animatable">
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa illum, laboriosam magnam quod inventore qui natus sint aliquam laudantium quasi rem, molestias iure ea distinctio sunt recusandae reprehenderit ratione.</p>
+							</div>
+							<div class="bottom">
+								<div class="logo"><img src="./img/home/logo.png" alt=""></div>
+								<div class="author">LOREM IPSUM - LOREN COMPANY NO.1</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="partners">
+					<div class="container">
+						<h2 class="main-title">partners<span class="animatable showDots"></span></h2>
+					</div>
+					<div class="partners__slider">
+						<div class="container">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="title">Organised by</div><a class="box-img" href="#"><img src="./img/home/logo-sg-spority-dark.png" alt=""></a>
+									</div>
+									<div class="swiper-slide">
+										<div class="title">Organised by</div><a class="box-img" href="#"><img src="./img/home/partners-1.png" alt=""></a>
+									</div>
+									<div class="swiper-slide">
+										<div class="title">Supported by</div><a class="box-img" href="#"><img src="./img/home/partners-2.png" alt=""></a>
+									</div>
+									<div class="swiper-slide">
+										<div class="title">In conjunction by</div><a class="box-img" href="#"><img src="./img/home/partners-3.png" alt=""></a>
+									</div>
+									<div class="swiper-slide">
+										<div class="title">In support of</div><a class="box-img" href="#"><img src="./img/home/club-rainbow.png" alt=""></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="section contactus">
+					<div class="container">
+						<h2 class="main-title">contact us<span class="animatable showDots"></span></h2>
+						<div class="wrap-form">
+							<div class="left">
+								<div class="form-group qtext">
+									<label for="">name</label>
+									<input class="name" type="text" name="" Placeholder="Requaired Field">
+								</div>
+								<div class="form-group qtext">
+									<label for="">Email</label>
+									<input class="email" type="email" name="" Placeholder="Requaired Field">
+								</div>
+								<div class="form-group qtext">
+									<label for="">contact</label>
+									<input class="phone" type="text" name="" Placeholder="Requaired Field">
+								</div>
+							</div>
+							<div class="right">
+								<div class="form-group qcontent">
+									<label for="">name</label>
+									<textarea name="" cols="30" rows="10" Placeholder="Type something"></textarea>
+								</div>
+								<div class="form-group btn-submit">
+									<input type="submit" value="Submit">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="aboutus-bottom"><a class="logo-pich" href="#"><img src="./img/home/pich-white.png" alt=""></a>
+						<div class="social-list"><a href="#"><em class="mdi mdi-instagram"></em></a><a href="#"><em class="mdi mdi-facebook"></em></a></div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script>
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&autoLogAppEvents=1';
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			t._e = [];
+			t.ready = function(f) {
+			t._e.push(f);
+			};
+			return t;
+			}(document, "script", "twitter-wjs"));
+		</script>
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+@keyframes fadeLeft
+    0%
+        opacity: 0
+        transform: translateX(30rem)
+
+    100%
+        transform: translateX(0rem)
+        opacity: 1
+@keyframes fadeRight
+    0%
+        opacity: 0
+        transform: translateX(-30rem)
+
+    100%
+        transform: translateX(0rem)
+        opacity: 1
+
+@keyframes moveInLeft
+    0%
+        opacity: 0
+        transform: translateX(-30rem)
+
+    80%
+        transform: translateX(5rem)
+
+    100%
+        opacity: 1
+        transform: translateX(0)
+@keyframes moveInRight
+    0%
+        opacity: 0
+        transform: translateX(30rem)
+
+    80%
+        transform: translateX(-5rem)
+
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+@keyframes moveInBottom
+    0%
+        opacity: 0
+        transform: translateY(3rem)
+
+    100%
+        opacity: 1
+        transform: translateY(0)
+@keyframes moveInTop
+    0%
+        opacity: 0
+        transform: translateY(-10rem)
+
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@-webkit-keyframes returnToNormal
+    from
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+    to
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+@keyframes returnToNormal
+    from
+        opacity: 0
+        -webkit-transform: translate3d(0, 100%, 0)
+        transform: translate3d(0, 100%, 0)
+    to
+        opacity: 1
+        -webkit-transform: none
+        transform: none
+
+@keyframes growth
+    from
+        transform: scale(.7)
+    to
+        transform: scale(1)
+@keyframes fade-in
+    from
+        opacity: 0
+    to
+        opacity: 1
+@keyframes showDots
+    0%
+        transform: translateX(-200px)
+        opacity: 0
+    to
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+@keyframes zoomIn
+    0%
+        opacity: 0
+        transform: scale(0.5)
+    100%
+        opacity: 1
+        transform: none
+
+@keyframes zoomReverseIn
+    0%
+        opacity: 0
+        transform: scale(1.5)
+    100%
+        opacity: 1
+        transform: none
+
+.animatable
+    visibility: hidden
+    animation-play-state: paused
+.animated
+    visibility: visible
+    animation-duration: 1s
+    animation-fill-mode: both
+    animation-play-state: running
+.animated.moveInLeft
+    animation-name: moveInLeft
+.animated.moveInRight
+    animation-name: moveInRight
+.animated.showDots
+    animation-name: showDots
+    animation-duration: .5s
+.animated.zoomReverseIn
+    animation-name: zoomReverseIn
+.animated.zoomIn
+    animation-name: zoomIn
